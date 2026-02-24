@@ -23,7 +23,7 @@ The system collects door sensor events and displays real-time status via a web i
 5. Dashboard fetches and displays event data
 
 ---
-
+```
 ## 📂 Project Structure
 
 privacy-event-iot-mvp\
@@ -60,7 +60,7 @@ privacy-event-iot-mvp\
 │  	 └── lambda_function.py
 ├── pyrightconfig.json
 └── README.md
-
+```
 dashboard/ # Frontend web interface
 gateway/ # Device & MQTT gateway scripts
 lambda/ # AWS Lambda functions
@@ -108,4 +108,5 @@ Debugging Steps:
 2. MQTT publish confirmation
 3. AWS IoT test client validation
 4. DynamoDB item inspection
+
 

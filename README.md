@@ -22,7 +22,7 @@ The system collects door sensor events and displays real-time status via a web i
 2. IoT Rule filters and forwards data to DynamoDB
 3. Lambda function queries latest event
 4. API Gateway exposes REST endpoint
-5. Dashboard fetches and displays event data
+5. Dashboard fetches and displays event data（Save in S3）
 
 ---
 ```
@@ -116,17 +116,6 @@ Debugging Steps:
 3. AWS IoT test client validation
 4. DynamoDB item inspection
 
-## ☁ AWS Cloud Architecture
 
-The system is fully built on AWS serverless services:
-
-- **AWS IoT Core** – Secure MQTT device communication
-- **AWS IoT Rule Engine** – SQL-based message routing
-- **Amazon DynamoDB** – Scalable NoSQL event storage
-- **AWS Lambda** – Serverless event query API
-- **Amazon API Gateway** – REST endpoint exposure
-- **Amazon CloudWatch** – Logging and monitoring
-
-This architecture ensures scalability, security, and minimal operational overhead.
 
 

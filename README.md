@@ -67,20 +67,45 @@ lambda/ # AWS Lambda functions
 infrastructure/ # Phase planning documents
 docs/ # Architecture & design documents
 
-## 🔧 Sensor Debugging (CUB Device)
+## 🔧 Device & Sensor Integration
 
-Device firmware publishes MQTT messages with the following structure:
+This project integrates a Japan-based industrial IoT sensor device (CUB series) for real-world event monitoring.
 
+The sensor is capable of detecting physical state changes (e.g., door open/close events) and transmits telemetry data via MQTT using X.509 certificate authentication.
+
+### Device Capabilities
+
+- Door state detection (open / close)
+- Periodic heartbeat reporting
+- Signal quality indicator (LQI)
+- Power status reporting
+- MQTT over TLS communication
+
+### Communication Flow
+
+1. Sensor publishes MQTT messages to AWS IoT Core
+2. Authentication is performed using device certificates
+3. AWS IoT Rule filters relevant fields
+4. Events are persisted to DynamoDB
+5. Lambda exposes REST API for frontend dashboard
+
+### Sample Payload
+
+```json
 {
   "device_id": "device01",
-  "door_state": "close",
+  "timestamp": "2026-02-20T06:24:42.867583+00:00",
   "event_type": "heartbeat",
+  "door_state": "close",
   "lqi": 119,
   "power": 32897
 }
+
+https://mono-wireless.com/jp/products/twelite-cue/index.html
 
 Debugging Steps:
 1. Local serial output verification
 2. MQTT publish confirmation
 3. AWS IoT test client validation
 4. DynamoDB item inspection
+

@@ -73,6 +73,13 @@ This project integrates a Japan-based industrial IoT sensor device (CUB series) 
 
 The sensor is capable of detecting physical state changes (e.g., door open/close events) and transmits telemetry data via MQTT using X.509 certificate authentication.
 
+### Reference
+The hardware device used in this project is provided by a Japan-based enterprise manufacturer.
+
+Product information:
+
+https://mono-wireless.com/jp/products/twelite-cue/index.html
+
 ### Device Capabilities
 
 - Door state detection (open / close)
@@ -101,12 +108,11 @@ The sensor is capable of detecting physical state changes (e.g., door open/close
   "power": 32897
 }
 
-https://mono-wireless.com/jp/products/twelite-cue/index.html
-
 Debugging Steps:
 1. Local serial output verification
 2. MQTT publish confirmation
 3. AWS IoT test client validation
 4. DynamoDB item inspection
+
 
 

@@ -1,6 +1,8 @@
 # Privacy Event IoT MVP
 
-A lightweight IoT event monitoring system built on AWS serverless architecture.
+A serverless IoT event monitoring system built on AWS cloud infrastructure.
+
+This project demonstrates end-to-end integration between industrial sensor hardware and AWS managed services, including secure device authentication, real-time event ingestion, cloud storage, and REST API exposure.
 
 ## 📌 Overview
 
@@ -114,5 +116,17 @@ Debugging Steps:
 3. AWS IoT test client validation
 4. DynamoDB item inspection
 
+## ☁ AWS Cloud Architecture
+
+The system is fully built on AWS serverless services:
+
+- **AWS IoT Core** – Secure MQTT device communication
+- **AWS IoT Rule Engine** – SQL-based message routing
+- **Amazon DynamoDB** – Scalable NoSQL event storage
+- **AWS Lambda** – Serverless event query API
+- **Amazon API Gateway** – REST endpoint exposure
+- **Amazon CloudWatch** – Logging and monitoring
+
+This architecture ensures scalability, security, and minimal operational overhead.
 
 

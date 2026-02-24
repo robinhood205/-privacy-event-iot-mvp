@@ -1,0 +1,22 @@
+data Flow
+
+Device (Sensor / Switch)     data layer
+        │
+        ▼
+AWS IoT Core
+        │
+        ▼
+IoT Rule
+        │
+        ▼
+DynamoDB
+        │
+        ▼
+Lambda (device-api)
+        │
+        ▼
+API Gateway
+   GET /events
+        │
+        ▼
+HTML Web Page       show lawyer
